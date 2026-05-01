@@ -26,21 +26,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Animación de desvanecimiento
             mensajeElement.classList.remove('fade-in-message');
-            
-            // Un pequeño retraso para reiniciar la animación
+
             setTimeout(() => {
                 mensajeElement.textContent = mensajeSeleccionado;
                 mensajeElement.classList.add('fade-in-message');
             }, 50);
 
-            // Efecto de Confeti mágico
+            // Efecto de Confeti 
             lanzarConfeti();
         });
     }
 });
 
 function lanzarConfeti() {
-    // Usamos canvas-confetti (ya importado en el HTML)
     if (typeof confetti === 'function') {
         const count = 200;
         const defaults = {
